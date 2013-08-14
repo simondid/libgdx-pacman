@@ -1,0 +1,19 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.badlogic.gdx.assets.loaders.AsynchronousAssetLoader"><rhs name\="com.badlogic.gdx.maps.tiled.TmxMapLoader"/></lhs><lhs name\="com.badlogic.gdx.assets.loaders.AssetLoader"><rhs name\="com.badlogic.gdx.maps.tiled.TmxMapLoader"/></lhs><lhs name\="com.badlogic.gdx.maps.tiled.TmxMapLoader"><rhs name\="com.badlogic.gdx.maps.tiled.TmxMapLoader"/></lhs><lhs name\="com.badlogic.gdx.maps.tiled.renderers.BatchTiledMapRenderer"><rhs name\="com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer"/></lhs><lhs name\="com.badlogic.gdx.maps.tiled.TiledMapRenderer"><rhs name\="com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer"/></lhs><lhs name\="com.badlogic.gdx.utils.Disposable"><rhs name\="com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer"/></lhs><lhs name\="com.badlogic.gdx.maps.MapRenderer"><rhs name\="com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer"/></lhs><lhs name\="com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer"><rhs name\="com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer"/></lhs><lhs name\="com.badlogic.gdx.graphics.Camera"><rhs name\="com.badlogic.gdx.graphics.OrthographicCamera"/></lhs><lhs name\="com.badlogic.gdx.graphics.OrthographicCamera"><rhs name\="com.badlogic.gdx.graphics.OrthographicCamera"/></lhs><lhs name\="com.badlogic.gdx.math.Vector"><rhs name\="com.badlogic.gdx.math.Vector2"/></lhs><lhs name\="com.badlogic.gdx.math.Vector2"><rhs name\="com.badlogic.gdx.math.Vector2"/></lhs><lhs name\="com.badlogic.gdx.maps.tiled.TiledMapTile"><rhs name\="com.badlogic.gdx.maps.tiled.tiles.StaticTiledMapTile"/></lhs><lhs name\="com.badlogic.gdx.maps.tiled.tiles.StaticTiledMapTile"><rhs name\="com.badlogic.gdx.maps.tiled.tiles.StaticTiledMapTile"/></lhs><lhs name\="com.badlogic.gdx.maps.tiled.TiledMapTileLayer$Cell"><rhs name\="com.badlogic.gdx.maps.tiled.TiledMapTileLayer$Cell"/></lhs></history>
+content_assist_number_of_computers=16
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+fontPropagated=true
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.formatterprofiles.version=12
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+org.eclipse.jface.textfont=1|Courier New|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Courier New;
+proposalOrderMigrated=true
+spelling_locale_initialized=true
+tabWidthPropagated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

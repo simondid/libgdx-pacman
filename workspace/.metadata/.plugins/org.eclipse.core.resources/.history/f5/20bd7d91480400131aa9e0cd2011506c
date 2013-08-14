@@ -1,0 +1,88 @@
+package ViewGame;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
+import com.badlogic.gdx.maps.tiled.TiledMapTileLayer.Cell;
+import com.badlogic.gdx.maps.tiled.TmxMapLoader;
+import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.Pool;
+import com.me.pacman.PacmanMainClass;
+
+import entity.PacMan;
+
+public class WorldHandler {
+
+	PacMan pacman;
+	private TiledMap map;
+	private Pool<Rectangle> rectPool = new Pool<Rectangle>() {
+		@Override
+		protected Rectangle newObject () {
+			return new Rectangle();
+		}
+	};
+	private Array<Rectangle> tiles = new Array<Rectangle>();
+	
+	public WorldHandler(PacmanMainClass game) {
+		// TODO Auto-generated constructor stub
+		
+		pacman = new PacMan(new Vector2(13, 7), 1, 1, 0, 5f);
+		
+		
+		TmxMapLoader loader = new TmxMapLoader();
+
+		map = loader.load("data/maps/PacMan.tmx");
+
+		Gdx.input.setInputProcessor(new InputProcessor(this));
+		
+		
+		
+	}
+
+
+
+	public void update(float dt) {
+		// TODO Auto-generated method stub
+		
+	getTiles(pacman.getPosition().x, pacman.getPosition().x-1, pacman.getPosition().y, pacman.getPosition().y+1, tiles);
+	pacman.update(pacman);
+	for(Rectangle tile: tiles){
+		if(pacman.getBounds().overlaps(tile)){
+			Gdx.app.log("hej", "hejjjj");
+		}
+	}
+	
+	
+	}
+	private void getTiles(float startX, float startY, float endX, float endY, Array<Rectangle> tiles) {
+		
+		int startXX = Math.round(startX);
+		int startYY = Math.round(startY);
+		TiledMapTileLayer layer = (TiledMapTileLayer)map.getLayers().get(0);
+		rectPool.freeAll(tiles);
+		tiles.clear();
+		for(int y =  startYY; y <= endY; y++) {
+			for(int x = startXX; x <= endX; x++) {
+				Cell cell = layer.getCell(x, y);
+				if(cell != null) {
+					Rectangle rect = rectPool.obtain();
+					rect.set(x, y, 1, 1);
+					tiles.add(rect);
+					
+				}
+			}
+		}
+	}
+	public Array<Rectangle> getTiles(){
+		return tiles;
+	}
+	public PacMan getPacMan(){
+		return pacman;
+	}
+	public TiledMap getMap(){
+		return map;
+	}
+
+}

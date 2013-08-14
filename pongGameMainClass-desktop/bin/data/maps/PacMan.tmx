@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="28" height="31" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="PacMan" tilewidth="16" tileheight="16">
+  <image source="PacMan.png" width="160" height="160"/>
+ </tileset>
+ <layer name="Walls" width="28" height="31">
+  <data encoding="base64" compression="zlib">
+   eJzFVu1uwjAM9FjHProiBmsZSOz9H3OJVIuTdU6ddBuW7gfG8aWXa9xORJ4q8ZLw3LBum7CT+ugThoZ1e+B7SNjMeCQ5zCOfV8P6IV/u8T5jIDmbj9TYHPKNCdOME8nZfKTG5pDvPyJyft5ZemcWPT/2/HhO+r+u135L9TV69jNsDMLfBy+vkfm+Es4GW+AbJf4+nCDfkb6Xwj60L9ON+VP3o3w1PkQ+pqcXqGcrn65/lds9qKG/30i9x2c1Rp1Rt9J+0eNaz3xxLvTwetb+Z4PtQf2J72+ED+uZP73nY+d3FH+ufZL6tX6JxG/yRe7PCF/WGbXx/Bm5P5f82fo9MUjdPaBxz+8J1QvvQNSwdr7r3bs0j5ZmSjSYtzPfh5S1ap3vTPNDwlV8rdbOd6v5t5T96fmwNN9LvvX8ifM6Ot8nUh/xp3dGUX8y3PP705uLf4F8T/4A47UYpg==
+  </data>
+ </layer>
+ <layer name="Collectables" width="28" height="31" opacity="0.93">
+  <data encoding="base64" compression="zlib">
+   eJxjYKA/kCYRU0MfNjfgchsparCJydDBPhkC8rT0H6nxQC4mxT2EAKXm0do+UtI9qeLo8oTcSyogR++ofaP2jdo3ah819A739sRAtF9ICSty1BBqI1GrvsWnl1720bt+JyWvDVV99MADAQA7lRnB
+  </data>
+ </layer>
+ <objectgroup name="Objects" width="28" height="31">
+  <object name="InkySpawnPoint" x="176" y="224" width="32" height="16"/>
+  <object name="PinkySpawnPoint" x="208" y="224" width="32" height="16"/>
+  <object name="ClydeSpawnPoint" x="240" y="224" width="32" height="16"/>
+  <object name="PacManSpawnPoint" x="208" y="368" width="32" height="16"/>
+  <object name="BlinkySpawnPoint" x="208" y="176" width="32" height="16"/>
+  <object name="FruitSpawnPoint" x="208" y="272" width="32" height="16"/>
+ </objectgroup>
+</map>

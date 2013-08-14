@@ -1,0 +1,50 @@
+package ViewGame;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.maps.MapLayer;
+import com.badlogic.gdx.maps.MapProperties;
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
+import com.badlogic.gdx.maps.tiled.TmxMapLoader;
+import com.badlogic.gdx.math.Vector2;
+import com.me.pacman.PacmanMainClass;
+
+import entity.PacMan;
+
+public class WorldHandler {
+
+	PacMan pacman;
+	private TiledMap map;
+
+	public WorldHandler(PacmanMainClass game) {
+		// TODO Auto-generated constructor stub
+		
+		pacman = new PacMan(new Vector2(13.5f, 7), 1, 1, 0, 5f);
+		
+		
+		TmxMapLoader loader = new TmxMapLoader();
+
+		map = loader.load("data/maps/PacMan.tmx");
+
+		Gdx.input.setInputProcessor(new InputProcessor(this));
+		
+	}
+
+
+
+	public void update(float dt) {
+		// TODO Auto-generated method stub
+		MapLayer wallLayer = map.getLayers().get("Walls");
+		MapProperties prop = (MapProperties) map.getLayers().get("Walls").getProperties().get("collidabale");
+		
+	
+		
+	}
+	public PacMan getPacMan(){
+		return pacman;
+	}
+	public TiledMap getMap(){
+		return map;
+	}
+
+}
