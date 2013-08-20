@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="28" height="31" tilewidth="16" tileheight="16">
  <tileset firstgid="1" name="PacMan" tilewidth="16" tileheight="16">
-  <image source="../../../../../../data/maps/PacMan.png" width="160" height="160"/>
+  <image source="PacMan.png" width="160" height="160"/>
   <tile id="26">
    <properties>
     <property name="coin" value="1"/>
    </properties>
   </tile>
+  <tile id="27">
+   <properties>
+    <property name="coin" value="10"/>
+   </properties>
+  </tile>
   <tile id="58">
    <properties>
-    <property name="tom" value="tom"/>
+    <property name="empty" value="true"/>
    </properties>
   </tile>
  </tileset>
@@ -34,9 +39,4 @@
   <object name="BlinkySpawnPoint" x="208" y="176" width="32" height="16"/>
   <object name="FruitSpawnPoint" x="208" y="272" width="32" height="16"/>
  </objectgroup>
- <layer name="empty" width="28" height="31">
-  <data encoding="base64" compression="zlib">
-   eJztwTEBAAAAwqD1T20MH6AAAAB4GA2QAAE=
-  </data>
- </layer>
 </map>

@@ -51,17 +51,12 @@ public class WorldRender {
 		
 		
 		
+	
 		// map rendering
 		
 		map = worldhandler.getMap();
 		render = new OrthogonalTiledMapRenderer(map,unitScale);
-		WIDTH = ((TiledMapTileLayer) map.getLayers().get(0)).getWidth();
-		HEIGHT = ((TiledMapTileLayer) map.getLayers().get(0)).getHeight();
-		camera.setToOrtho(false, WIDTH, HEIGHT);
-		camera.position.x = WIDTH / 2;
-		camera.position.y = HEIGHT / 2+0.5f;
 		
-		camera.update();
 	
 		
 		// pacman stuff
@@ -79,7 +74,14 @@ public class WorldRender {
            spriteBatch = new SpriteBatch();                                
            stateTime = 0f;                                                 
 		
-	
+        // camera stuff
+   		WIDTH = ((TiledMapTileLayer) map.getLayers().get(0)).getWidth();
+   		HEIGHT = ((TiledMapTileLayer) map.getLayers().get(0)).getHeight();
+   		camera.setToOrtho(false, WIDTH, HEIGHT);
+   		camera.position.x = WIDTH / 2;
+   		camera.position.y = HEIGHT / 2+0.5f;
+   		
+   		camera.update();
           
 	}
 
@@ -93,7 +95,7 @@ public class WorldRender {
 		render.setView(camera);
 		render.render();
 		
-		map.getLayers().get(0).setVisible(true);
+		
 		
 		// pacman render
 		 stateTime += Gdx.graphics.getDeltaTime();                      
@@ -105,7 +107,6 @@ public class WorldRender {
          
          spriteBatch.end();
 	
-         
       
         }
 

@@ -1,7 +1,0 @@
-package ViewGame;
-
-import com.badlogic.gdx.InputProcessor;
-
-public class InputProcessor implements com.badlogic.gdx.InputProcessor {
-
-}
