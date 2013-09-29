@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="Sceens.GameScreen"/>
+<fullyQualifiedTypeName name="java.lang.Package"/>
+<fullyQualifiedTypeName name="com.me.mygdxgame.PacmanMainClass"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.maps.tiled.TiledMapRenderer"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.maps.tiled.TiledMap"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.maps.tiled.TmxMapLoader"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.graphics.GL20"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.graphics.OrthographicCamera"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.InputProcessor"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g3d.shaders.BaseShader.Input"/>
+<fullyQualifiedTypeName name="ViewGame.InputProcessor"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.Input.Keys"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.Input"/>
+<fullyQualifiedTypeName name="entity.PacMan"/>
+<fullyQualifiedTypeName name="java.lang.Enum"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.maps.tiled.tiles.StaticTiledMapTile"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.maps.tiled.TiledMapTileLayer.Cell"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.maps.tiled.TiledMapTileLayer"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.maps.tiled.TiledMapTile"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.Gdx"/>
+<fullyQualifiedTypeName name="ViewGame.WorldHandler"/>
+<fullyQualifiedTypeName name="entity.Entity.State"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.Animation"/>
+<fullyQualifiedTypeName name="entity.Pinky"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.TextureRegion"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.math.Vector2"/>
+</qualifiedTypeNameHistroy>
