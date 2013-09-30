@@ -30,22 +30,52 @@ public class InputProcessor implements com.badlogic.gdx.InputProcessor {
 		if (keycode == Input.Keys.ESCAPE) {
 			Gdx.app.exit();
 		}
-		
+
 		if (keycode == Input.Keys.LEFT) {
 
-			game.pacman.setStateLeft();
+			Vector2 p = game.getPacMan().getPosition();
+			if(p.y != Math.round(p.x)){
+				p.add(-game.moveSpeed,0 );
+			}
+			p.x -= game.moveSpeed;
+			game.pacman.setState(State.Left);
+			game.getPacMan().setPosition(p);
 		}
 
 		if (keycode == Input.Keys.RIGHT) {
 
-		game.pacman.setStateRight();
+			Vector2 p = game.getPacMan().getPosition();
+			if(p.y != Math.round(p.x)){
+				p.add(+game.moveSpeed,0 );
+			}
+			p.x += game.moveSpeed;
+			game.pacman.setState(State.Right);
+			game.getPacMan().setPosition(p);
 		}
 		if (keycode == Input.Keys.UP) {
 
-		game.pacman.setStateUP();
+			Vector2 p = game.getPacMan().getPosition();
+			if(p.y != Math.round(p.y)){
+				p.add(0, +game.moveSpeed);
+			}
+			p.y += game.moveSpeed;
+			game.pacman.getState();
+			game.pacman.setState(State.up);
+			game.getPacMan().setPosition(p);
 		}
 		if (keycode == Input.Keys.DOWN) {
-			game.pacman.setStateDown();
+
+			Vector2 p = game.getPacMan().getPosition();
+			
+			if(p.y != Math.round(p.y)){
+				p.add(0, -game.moveSpeed);
+			}
+			
+			
+			p.y -= game.moveSpeed;
+			game.pacman.getState();
+			game.pacman.setState(State.Down);
+			game.getPacMan().setPosition(p);
 		}
 		return false;
 	}

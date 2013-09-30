@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy 4 packages to &apos;pacman/src&apos;&#x0D;&#x0A;- Original project: &apos;pongGameMainClass&apos;&#x0D;&#x0A;- Destination element: &apos;pacman/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     pongGameMainClass/src/TweenAccessors&#x0D;&#x0A;     pongGameMainClass/src/com.me.mygdxgame&#x0D;&#x0A;     pongGameMainClass/src/Sceens&#x0D;&#x0A;     pongGameMainClass/src/ViewGame" description="Copy packages" destination="=pacman/src" element1="/src&lt;TweenAccessors" element2="/src&lt;com.me.mygdxgame" element3="/src&lt;Sceens" element4="/src&lt;ViewGame" flags="589830" fragments="4" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1375178842676" version="1.0"/>
-</session>

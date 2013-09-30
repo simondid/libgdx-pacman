@@ -38,9 +38,7 @@ public abstract class Entity {
 	public State getState() {
 		return state;
 	}
-	public void setState(State s) {
-		this.state = s;
-	}
+
 	public void setStateUP() {
 		this.state = state.up;
 	}

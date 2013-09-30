@@ -38,22 +38,10 @@ public abstract class Entity {
 	public State getState() {
 		return state;
 	}
-	public void setState(State s) {
-		this.state = s;
+
+	public void setState(State state) {
+		this.state = state;
 	}
-	public void setStateUP() {
-		this.state = state.up;
-	}
-	public void setStateDown() {
-		this.state = state.Down;
-	}
-	public void setStateLeft() {
-		this.state = state.Left;
-	}
-	public void setStateRight() {
-		this.state = state.Right;
-	}
-	
 
 	/**
 	 * get the last movement state
