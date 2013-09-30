@@ -1,3 +1,4 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.Enum"><rhs name\="entity.Entity$State"/></lhs><lhs name\="entity.Entity$State"><rhs name\="entity.Entity$State"/></lhs><lhs name\="com.badlogic.gdx.math.Vector"><rhs name\="com.badlogic.gdx.math.Vector2"/></lhs><lhs name\="com.badlogic.gdx.math.Vector2"><rhs name\="com.badlogic.gdx.math.Vector2"/></lhs></history>
 content_assist_number_of_computers=12
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0

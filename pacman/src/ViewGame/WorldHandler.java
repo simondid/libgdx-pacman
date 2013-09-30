@@ -31,7 +31,7 @@ public class WorldHandler {
 	private Array<Rectangle> tiles = new Array<Rectangle>();
 	int Score =0;
 	// move ment speed 60/ 10 = 1 tile pr 0,1 second
-	public static final float moveSpeed = 0.5f;
+	public static final float moveSpeed = 0.1f;
 	int moveCount =0;
 	// varibal for eating ghost
 	public boolean eatghost = false;
@@ -58,7 +58,9 @@ public class WorldHandler {
 		// TODO Auto-generated method stub
 		
 		
+		moveCount++;
 		
+		if(moveCount == 2){
 		
 		
 	// code for making pacman move every alle the timer after first move 
@@ -69,27 +71,31 @@ public class WorldHandler {
 	eatCoins();
 	// loggs the score
 	logScore();
-	
+	moveCount =0;
+		}
+		
+		
 	}
 	private void autoMove() {
 		// TODO Auto-generated method stub
-		moveCount++;
 		
-		if(moveCount == 10){
-		if(pacman.getlastState() == State.up){
+			
+			
+			
+			
+		if(pacman.getState() == State.up){
 			pacman.setPosition(new Vector2(pacman.getPosition().x,pacman.getPosition().y+moveSpeed));
 			}
-		if(pacman.getlastState() == State.Down){
+		if(pacman.getState() == State.Down){
 			pacman.setPosition(new Vector2(pacman.getPosition().x,pacman.getPosition().y-moveSpeed));
 			}		
-		if(pacman.getlastState() == State.Left){
+		if(pacman.getState() == State.Left){
 			pacman.setPosition(new Vector2(pacman.getPosition().x-moveSpeed,pacman.getPosition().y));
 			}
-		if(pacman.getlastState() == State.Right){
+		if(pacman.getState() == State.Right){
 			pacman.setPosition(new Vector2(pacman.getPosition().x+moveSpeed,pacman.getPosition().y));
 			}
-		moveCount =0;
-		}
+			
 		
 	}
 	private void WallCollisionDecetion() {
@@ -102,23 +108,44 @@ public class WorldHandler {
 				Gdx.app.log("collision", "true");
 				
 			
-				if(pacman.getlastState() == State.up){
+				if(pacman.getState() == State.up){
 					pacman.setPosition(new Vector2(pacman.getPosition().x,pacman.getPosition().y-moveSpeed));
-					}
-				if(pacman.getlastState() == State.Down){
-					pacman.setPosition(new Vector2(pacman.getPosition().x,pacman.getPosition().y+moveSpeed));
-					}		
-				if(pacman.getlastState() == State.Left){
-					pacman.setPosition(new Vector2(pacman.getPosition().x+moveSpeed,pacman.getPosition().y));
-					}
-				if(pacman.getlastState() == State.Right){
-					pacman.setPosition(new Vector2(pacman.getPosition().x-moveSpeed,pacman.getPosition().y));
-					}
-				
 				}
-			
+				if(pacman.getState() == State.Down){
+					pacman.setPosition(new Vector2(pacman.getPosition().x,pacman.getPosition().y+moveSpeed));
+				}		
+				if(pacman.getState() == State.Left){
+					pacman.setPosition(new Vector2(pacman.getPosition().x+moveSpeed,pacman.getPosition().y));
+				}
+				if(pacman.getState() == State.Right){
+					pacman.setPosition(new Vector2(pacman.getPosition().x-moveSpeed,pacman.getPosition().y));
+				}
+				float x = pacman.getPosition().x;
+				float y = pacman.getPosition().y;
+				
+					if(x != Math.round(x)){
+						if(pacman.getState() == State.Left){
+							pacman.setPosition(new Vector2((float) Math.round(x), y));
+							pacman.setStateNon();
+						}
+						if(pacman.getState() == State.Right){
+							pacman.setPosition(new Vector2((float) Math.round(x), y));
+							pacman.setStateNon();
+						}
+					}
+					if(y != Math.round(y)){
+						if(pacman.getState() == State.up){
+							pacman.setPosition(new Vector2((float) x, Math.round(y)));
+							pacman.setStateNon();
+						}
+						if(pacman.getState() == State.Down){
+							pacman.setPosition(new Vector2((float) x, Math.round(y)));
+							pacman.setStateNon();
+						}
+				
+					}
 			}
-		
+		}		
 	}
 	private void logScore() {
 		// TODO Auto-generated method stub

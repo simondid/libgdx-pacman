@@ -16,7 +16,7 @@ public abstract class Entity {
 		Non
 	}
 
-	State state;
+	State state,lastState;
 	
 	public Entity(Vector2 position, float width, float height){
 		this.position = position;
@@ -40,27 +40,33 @@ public abstract class Entity {
 	}
 	public void setState(State s) {
 		this.state = s;
+		this.lastState = this.state;
 	}
 	public void setStateUP() {
 		this.state = state.up;
+		this.lastState = this.state;
 	}
 	public void setStateDown() {
 		this.state = state.Down;
+		this.lastState = this.state;
 	}
 	public void setStateLeft() {
 		this.state = state.Left;
+		this.lastState = this.state;
 	}
 	public void setStateRight() {
 		this.state = state.Right;
+		this.lastState = this.state;
 	}
-	
+	public void setStateNon(){
+		this.state = state.Non;
+		this.lastState = this.state;
+	}
+	public State getLastState(){
+		return lastState;
+	}
 
-	/**
-	 * get the last movement state
-	 */
-	public State getlastState(){
-		return state;
-	}
+	
 	/**
 	 * @param position the position to set
 	 */

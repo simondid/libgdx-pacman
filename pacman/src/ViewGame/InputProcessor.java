@@ -1,5 +1,7 @@
 package ViewGame;
 
+import javax.swing.plaf.basic.BasicSplitPaneUI.KeyboardDownRightHandler;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -31,17 +33,20 @@ public class InputProcessor implements com.badlogic.gdx.InputProcessor {
 			Gdx.app.exit();
 		}
 		
-		if (keycode == Input.Keys.LEFT) {
+	
+		return false;
+	}
 
+	@Override
+	public boolean keyUp(int keycode) {
+		// TODO Auto-generated method stub
+		if (keycode == Input.Keys.LEFT) {
 			game.pacman.setStateLeft();
 		}
-
 		if (keycode == Input.Keys.RIGHT) {
-
 		game.pacman.setStateRight();
 		}
 		if (keycode == Input.Keys.UP) {
-
 		game.pacman.setStateUP();
 		}
 		if (keycode == Input.Keys.DOWN) {
@@ -51,15 +56,10 @@ public class InputProcessor implements com.badlogic.gdx.InputProcessor {
 	}
 
 	@Override
-	public boolean keyUp(int keycode) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
 	public boolean keyTyped(char character) {
 		// TODO Auto-generated method stub
-
+	
+	
 		return false;
 	}
 
